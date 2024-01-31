@@ -9,12 +9,12 @@ class APIClient:
         self.qiita_url = "https://qiita.com/"
         self.zenn_url = "https://zenn.dev/api/articles?article_type=tech"
 
-    def get_articles(self):
+    def get_articles(self) -> list[dict]:
         qiita_articles = self.__get_qiita_articles()
         zenn_articles = self._get_zenn_articles()
         return qiita_articles + zenn_articles
 
-    def __get_qiita_articles(self):
+    def __get_qiita_articles(self) -> list[dict]:
         response = requests.get(self.qiita_url).text
         soup = BeautifulSoup(response, "html.parser")
         articles = soup.find_all("article")
@@ -38,7 +38,7 @@ class APIClient:
             )
         return result
 
-    def _get_zenn_articles(self):
+    def _get_zenn_articles(self) -> list[dict]:
         articles = requests.get(self.zenn_url).json()["articles"]
         result = []
         for article in articles:

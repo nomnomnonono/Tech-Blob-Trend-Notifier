@@ -2,10 +2,11 @@ from tech_blog_trend_notifier.api import APIClient
 from tech_blog_trend_notifier.mail import MailClient
 
 
-def main():
+def main() -> None:
     api = APIClient()
-    articles = api.get_articles()
     mail = MailClient()
+    articles = api.get_articles()
+    mail.send(articles)
 
 
 if __name__ == "__main__":
