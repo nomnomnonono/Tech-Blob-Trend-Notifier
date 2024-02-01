@@ -1,4 +1,12 @@
 [[package]]
+name = "antlr4-python3-runtime"
+version = "4.9.3"
+description = "ANTLR 4.9.3 runtime for Python 3.7"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "beautifulsoup4"
 version = "4.12.3"
 description = "Screen-scraping library"
@@ -208,6 +216,18 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
+name = "omegaconf"
+version = "2.3.0"
+description = "A flexible configuration library"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+antlr4-python3-runtime = ">=4.9.0,<4.10.0"
+PyYAML = ">=5.1.0"
+
+[[package]]
 name = "packaging"
 version = "23.2"
 description = "Core utilities for Python packages"
@@ -299,6 +319,14 @@ tomli = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
 
 [package.extras]
 testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
+
+[[package]]
+name = "pyyaml"
+version = "6.0.1"
+description = "YAML parser and emitter for Python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
 
 [[package]]
 name = "requests"
@@ -394,9 +422,10 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<3.12"
-content-hash = "263ae5da5ce091ae3bbe2737f37d87eeb03b0134a78862282dd34672fd958266"
+content-hash = "d34177bedd34cb31053b0333daa693abb04a7d378a928f4bebe21e23d2ff69a9"
 
 [metadata.files]
+antlr4-python3-runtime = []
 beautifulsoup4 = []
 black = []
 certifi = []
@@ -415,6 +444,7 @@ isort = []
 mccabe = []
 mypy = []
 mypy-extensions = []
+omegaconf = []
 packaging = []
 pathspec = []
 platformdirs = []
@@ -423,6 +453,7 @@ pycodestyle = []
 pyflakes = []
 pysen = []
 pytest = []
+pyyaml = []
 requests = []
 smmap = []
 soupsieve = []

@@ -1,1 +1,1 @@
-# Tech Blob Trend Notifier
+# Tech Blog Trend Notifier

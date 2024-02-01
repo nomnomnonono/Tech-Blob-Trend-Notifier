@@ -13,3 +13,7 @@ test:
 .PHONY: install
 install:
 	poetry install
+
+.PHONY: run
+run:
+	poetry run python main.py
